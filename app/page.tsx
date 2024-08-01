@@ -75,7 +75,12 @@ export default function Home() {
     <main className="flex flex-col gap-2">
       <Dialog open={open} onOpenChange={setOpen}>
         <div className="flex gap-2">
-          <Input type="text" value={filterItems} onChange={(e) => setFilterItems(e.target.value)} />
+          <Input
+            type="text"
+            value={filterItems}
+            onChange={(e) => setFilterItems(e.target.value)}
+            placeholder="Search product"
+          />
           <DialogTrigger asChild>
             <Button>Add Item</Button>
           </DialogTrigger>
